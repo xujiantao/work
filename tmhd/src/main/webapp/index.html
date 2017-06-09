@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>inde.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport" />
+	<meta content="yes" name="apple-mobile-web-app-capable"/> 
+	<meta content="yes" name="apple-touch-fullscreen"/> 
+	<meta name="data-spm" content="a215s"/> 
+	<meta content="telephone=no,email=no" name="format-detection"/> 
+	
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="baidu-site-verification" content="YjhJajMPFI" />
+	<meta property="wb:webmaster" content="d906b4c366bb0de4" />
+	<meta property="qc:admins" content="265326617667730121163757" />	
+	<script src="//g.alicdn.com/tmapp/tida/3.2.53/tida.js?appkey=23902045"></script>    
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src='js/vconsole.min.js'></script>
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+    <button id="Tida-toast">Tida.toast</button>
+    <button id="Tida-showLoading">Tida.showLoading</button>
+    <button id="Tida-hideLoading">Tida.hideLoading</button>
+    <button id="Tida-setTitle">Tida.setTitle</button>
+    <button id="Tida-network">Tida.network</button>
+    
+    <script type="text/javascript">
+    $(function(){
+    
+    	$('#Tida-toast').click(function(){
+    		Tida.toast("Hello World!");
+    	});
+    	$('#Tida-showLoading').click(function(){
+    		Tida.showLoading("Loading...");
+    	});
+    	$('#Tida-hideLoading').click(function(){
+    		Tida.hideLoading();
+    	});
+    	
+    	$('#Tida-setTitle').click(function(){
+    		Tida.setTitle("自定义标题");
+    	});
+    	
+    	$('#Tida-network').click(function(){
+    		Tida.network.getType(function(data) {
+			    if (data.errorCode) {
+			        console.error(data.errorCode, data.errorMessage);
+			        return;
+			    }
+			    console.log(data);
+			});
+    	});
+    });
+    </script>
+  </body>
+</html>
